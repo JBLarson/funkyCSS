@@ -1,0 +1,107 @@
+
+
+#block1 {
+
+  width: 50vw;
+  height: 50vw;
+  background: red;
+  position: absolute;
+  animation: circleFunk3 5s infinite;
+  border-radius: 100vw;
+  border-style: ridge;
+  border-width: thin;
+  border-color: black;
+
+}
+
+
+#block2 {
+
+  width: 50vw;
+  height: 50vw;
+  background: black;
+  position: absolute;
+  border-radius: 100vw;
+  animation: backgroundCircle 5s infinite;
+  border-style: ridge;
+  border-width: thin;
+  border-color: black;
+}
+
+
+@keyframes backgroundCircle {
+  0%  {background: green;}
+  25%  {background: blue;}
+  50%  {background: yellow;}
+  75%  {background: blue;}
+  100%  {background: green;}
+
+
+}
+
+
+
+@keyframes circleFunk3 {
+  0%  {background: white; border-width: 4vw;}
+  25%  {background: blue; border-width: 2vw;}
+  50%  {background: white; border-width: 1vw;}
+  75%  {background: blue; border-width: 2vw;}
+  100%  {background: white; border-width: 4vw;}
+
+
+}
+
+
+
+
+@keyframes circleFunk {
+
+  0%  {background: red; border-bottom-left-radius: 100vw; border-top-right-radius: 20vw; border-top-left-radius: 100vw; border-bottom-right-radius: 100vw;}
+
+  25%  {background: green; border-bottom-left-radius: 100vw; border-top-right-radius: 100vw; border-top-left-radius: 100vw; border-bottom-right-radius: 20vw;}
+
+  50%  {background: white; border-bottom-left-radius: 20vw; border-top-right-radius: 100vw; border-top-left-radius: 100vw; border-bottom-right-radius: 100vw;}
+
+  75%  {background: red; border-bottom-left-radius: 100vw; border-top-right-radius: 100vw; border-top-left-radius: 20vw; border-bottom-right-radius: 100vw;}
+
+  100%  {background: red; border-bottom-left-radius: 100vw; border-top-right-radius: 20vw; border-top-left-radius: 100vw; border-bottom-right-radius: 100vw;}
+
+}
+
+
+
+@keyframes backgroundCircle2 {
+  0%   {background: black; border-width: thick; border-bottom-color: green; border-top-right-radius: 100vw; border-top-left-radius: 100vw; border-bottom-right-radius: 40vw;}
+
+  25%  {background: black; border-bottom-left-radius: 60vw; border-top-right-radius: 100vw; border-top-left-radius: 100vw; border-bottom-right-radius: 60vw;}
+
+  50%  {background: black; border-bottom-left-radius: 80vw; border-top-right-radius: 80vw; border-top-left-radius: 80vw; border-bottom-right-radius: 80vw;}
+
+  75%  {background: black; border-bottom-left-radius: 100vw; border-top-right-radius: 60vw; border-top-left-radius: 60vw; border-bottom-right-radius: 100vw;}
+
+  100% {background: black; border-bottom-left-radius: 100vw; border-top-right-radius: 40vw; border-top-left-radius: 40vw; border-bottom-right-radius: 100vw;}
+}
+
+
+
+/* medium sized screens*/
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .block1,
+  .block2 {
+    width: 30vw;
+  }
+}
+
+/* large screens*/
+@media only screen and (min-width: 961px) {
+  .block1,
+  .block2 {
+    width: 10vw;
+  }
+
+}
+
+
+
+
+
