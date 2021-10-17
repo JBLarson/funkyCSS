@@ -1,0 +1,83 @@
+
+
+
+#block1 {
+  width: 10vw;
+  height: 10vw;
+  background: red;
+  position: relative;
+  animation: rotateZkf 3s infinite;
+}
+
+
+#block2 {
+  width: 10vw;
+  height: 10vw;
+  background: green;
+  position: relative;
+  animation: rotateZkf 3s infinite;
+}
+
+
+#block3 {
+  width: 10vw;
+  height: 10vw;
+  background: blue;
+  position: relative;
+  animation: rotateZkf2 3s infinite;
+}
+
+
+
+#block4 {
+
+  width: 10vw;
+  height: 10vw;
+  background: orange;
+  position: relative;
+  animation: rotateZkf2 3s infinite;
+}
+
+
+
+@keyframes rotateZkf {
+  0%   {transform: rotateZ(0deg); top: 0px; left: 0px;}
+  25%   {transform: rotateZ(90deg); top: 100px; left: 100px;}
+  50%   {transform: rotateZ(180deg); top: 200px; left: 200px;}
+  75%   {transform: rotateZ(270deg); top: 100px; left: 100px;}
+  100%   {transform: rotateZ(0deg); top: 0px; left: 0px;}
+}
+
+
+
+@keyframes rotateZkf2 {
+  0%   {transform: rotateZ(0deg); top: 0px; left: 0px;}
+  25%   {transform: rotateZ(90deg); top: 100px; left: -100px;}
+  50%   {transform: rotateZ(180deg); top: 200px; left: -200px;}
+  75%   {transform: rotateZ(270deg); top: 100px; left: -100px;}
+  100%   {transform: rotateZ(0deg); top: 0px; left: 0px;}
+}
+
+/* medium sized screens*/
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .block1,
+  .block2,
+  .block3,
+  .block4 {
+    width: 20vw;
+  }
+
+}
+
+/* large screens*/
+@media only screen and (min-width: 961px) {
+  .block1,
+  .block2,
+  .block3,
+  .block4 {
+    width: 40vw;
+  }
+
+}
+
+
