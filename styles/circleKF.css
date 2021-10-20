@@ -3,70 +3,116 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: black;
-
 }
 
 .page {
   display: flex;
   flex-wrap: wrap;
-}
-
-
-.section {
-  width: 100%;
-  height: 300px;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 
-
-#block1 {
-  background: black;
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  animation: circleAnim 6s infinite;
+.section {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bkgrAnimation 8s infinite;
   animation-timing-function: linear;
-  border-radius: 100vw;
-  border-style: solid;
+}
+
+
+
+#innerBlock1 {
+  background: black;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  animation: innerAnimation 8s infinite;
+  animation-timing-function: linear;
+  border-style: groove;
   border-width: 2vw;
+  border-radius: 100vw;
+
+}
+
+#innerBlock2 {
+  background: black;
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  animation: innerAnimation2 8s infinite;
+  animation-timing-function: linear;
+  border-style: groove;
+  border-width: 2vw;
+  border-radius: 100vw;
 
 }
 
 #bkgBlock {
   background: black;
-  width: 475px;
-  height: 475px;
+  width: 500px;
+  height: 500px;
   position: absolute;
-  animation: backgroundCircle 6s infinite;
+  animation: outerAnimation 8s infinite;
   animation-timing-function: linear;
-  border-radius: 100vw;
-  border-style: solid;
+  border-style: groove;
   border-width: 2vw;
+  border-radius: 100vw;
 
 }
 
 
 
 
-@keyframes circleAnim {
-  0% {border-left-color: white; border-top-color: blue; border-right-color: white; border-bottom-color: white;
-      border-left-width: 1vw; border-top-width: 2vw; border-right-width: 1vw; border-bottom-width: 1vw;}
+@keyframes innerAnimation {
+  0% {border-left-color: white; border-top-color: red; border-right-color: white; border-bottom-color: white;
+      border-left-width: 1vw; border-top-width: 2vw; border-right-width: 1vw; border-bottom-width: 1vw;
+      background: red;}
 
-  25% {border-left-color: white; border-top-color: white; border-right-color: blue; border-bottom-color: white;
-      border-left-width: 1vw; border-top-width: 1vw; border-right-width: 2vw; border-bottom-width: 1vw;}
+  25% {border-left-color: white; border-top-color: white; border-right-color: green; border-bottom-color: white;
+      border-left-width: 1vw; border-top-width: 1vw; border-right-width: 2vw; border-bottom-width: 1vw;
+      background: green;}
 
   50% {border-left-color: white; border-top-color: white; border-right-color: white; border-bottom-color: blue;
-      border-left-width: 1vw; border-top-width: 1vw; border-right-width: 1vw; border-bottom-width: 2vw;}
+      border-left-width: 1vw; border-top-width: 1vw; border-right-width: 1vw; border-bottom-width: 2vw;
+      background: blue;}
 
-  75% {border-left-color: blue; border-top-color: white; border-right-color: white; border-bottom-color: white;
-      border-left-width: 2vw; border-top-width: 1vw; border-right-width: 1vw; border-bottom-width: 1vw;}
+  75% {border-left-color: green; border-top-color: white; border-right-color: white; border-bottom-color: white;
+      border-left-width: 2vw; border-top-width: 1vw; border-right-width: 1vw; border-bottom-width: 1vw;
+      background: green;}
+
+  100% {border-left-color: white; border-top-color: red; border-right-color: white; border-bottom-color: white;
+      border-left-width: 1vw; border-top-width: 2vw; border-right-width: 1vw; border-bottom-width: 1vw;
+      background: red;}
+
+}
+
+
+
+
+@keyframes innerAnimation2 {
+  0% {border-left-color: white; border-top-color: blue; border-right-color: white; border-bottom-color: white;
+      border-left-width: 1vw; border-top-width: 2vw; border-right-width: 1vw; border-bottom-width: 1vw;
+      background: blue;}
+
+  25% {border-left-color: white; border-top-color: white; border-right-color: red; border-bottom-color: white;
+      border-left-width: 1vw; border-top-width: 1vw; border-right-width: 2vw; border-bottom-width: 1vw;
+      background: red;}
+
+  50% {border-left-color: white; border-top-color: white; border-right-color: white; border-bottom-color: green;
+      border-left-width: 2vw; border-top-width: 1vw; border-right-width: 1vw; border-bottom-width: 1vw;
+      background: green;}
+
+  75% {border-left-color: red; border-top-color: white; border-right-color: white; border-bottom-color: white;
+      border-left-width: 1vw; border-top-width: 1vw; border-right-width: 2vw; border-bottom-width: 1vw;
+      background: red;}
 
   100% {border-left-color: white; border-top-color: blue; border-right-color: white; border-bottom-color: white;
-      border-left-width: 1vw; border-top-width: 2vw; border-right-width: 1vw; border-bottom-width: 1vw;}
+      border-left-width: 1vw; border-top-width: 2vw; border-right-width: 1vw; border-bottom-width: 1vw;
+      background: blue;}
 
 }
 
@@ -74,29 +120,42 @@
 
 
 
-@keyframes backgroundCircle {
-  0% {border-left-color: white; border-top-color: blue; border-right-color: white; border-bottom-color: white;
-      border-left-width: 2vw; border-top-width: 1vw; border-right-width: 2vw; border-bottom-width: 2vw;}
+@keyframes outerAnimation {
+  0% {border-left-color: white; border-top-color: green; border-right-color: white; border-bottom-color: white;
+      border-left-width: 1vw; border-top-width: 2vw; border-right-width: 1vw; border-bottom-width: 1vw;
+      background: green;}
 
   25% {border-left-color: white; border-top-color: white; border-right-color: blue; border-bottom-color: white;
-      border-left-width: 2vw; border-top-width: 2vw; border-right-width: 1vw; border-bottom-width: 2vw;}
+      border-left-width: 1vw; border-top-width: 1vw; border-right-width: 2vw; border-bottom-width: 1vw;
+      background: blue;}
 
-  50% {border-left-color: white; border-top-color: white; border-right-color: white; border-bottom-color: blue;
-      border-left-width: 2vw; border-top-width: 2vw; border-right-width: 2vw; border-bottom-width: 1vw;}
+  50% {border-left-color: white; border-top-color: white; border-right-color: white; border-bottom-color: red;
+      border-left-width: 1vw; border-top-width: 1vw; border-right-width: 1vw; border-bottom-width: 2vw;
+      background: red;}
 
   75% {border-left-color: blue; border-top-color: white; border-right-color: white; border-bottom-color: white;
-      border-left-width: 1vw; border-top-width: 2vw; border-right-width: 2vw; border-bottom-width: 2vw;}
+      border-left-width: 2vw; border-top-width: 1vw; border-right-width: 1vw; border-bottom-width: 1vw;
+      background: blue;}
 
-  100% {border-left-color: white; border-top-color: blue; border-right-color: white; border-bottom-color: white;
-      border-left-width: 2vw; border-top-width: 1vw; border-right-width: 2vw; border-bottom-width: 2vw;}
+  100% {border-left-color: white; border-top-color: green; border-right-color: white; border-bottom-color: white;
+      border-left-width: 1vw; border-top-width: 2vw; border-right-width: 1vw; border-bottom-width: 1vw;
+      background: green;}
 
 }
 
 
 
+@keyframes bkgrAnimation {
+  0%  {background: red;}
 
+  25% {background: green;}
 
+  50% {background: blue;}
 
+  75% {background: green;}
 
+  100% {background: red;}
+
+}
 
 
