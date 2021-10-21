@@ -19,18 +19,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   animation: bkgrAnimation 8s infinite;
   animation-timing-function: linear;
+  margin-right: 0px;
+  margin-left: 200px;
+
 }
 
 
 
-#innerBlock1 {
+#innerBlock0 {
   background: black;
-  width: 250px;
-  height: 250px;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  animation: innerAnimation 8s infinite;
+  animation: outerAnimation 8s infinite;
   animation-timing-function: linear;
   border-style: groove;
   border-width: 2vw;
@@ -38,10 +42,10 @@
 
 }
 
-#innerBlock2 {
+#innerBlock1 {
   background: black;
-  width: 350px;
-  height: 350px;
+  width: 200px;
+  height: 200px;
   position: absolute;
   animation: innerAnimation2 8s infinite;
   animation-timing-function: linear;
@@ -51,10 +55,64 @@
 
 }
 
-#bkgBlock {
+#innerBlock2 {
+  background: black;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  animation: innerAnimation 8s infinite;
+  animation-timing-function: linear;
+  border-style: groove;
+  border-width: 2vw;
+  border-radius: 100vw;
+
+}
+
+#innerBlock3 {
+  background: black;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  animation: outerAnimation 8s infinite;
+  animation-timing-function: linear;
+  border-style: groove;
+  border-width: 2vw;
+  border-radius: 100vw;
+
+}
+
+#innerBlock4 {
   background: black;
   width: 500px;
   height: 500px;
+  position: absolute;
+  animation: innerAnimation2 8s infinite;
+  animation-timing-function: linear;
+  border-style: groove;
+  border-width: 2vw;
+  border-radius: 100vw;
+
+}
+
+#innerBlock5 {
+  background: black;
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  animation: innerAnimation 8s infinite;
+  animation-timing-function: linear;
+  border-style: groove;
+  border-width: 2vw;
+  border-radius: 100vw;
+
+}
+
+
+
+#bkgBlock {
+  background: black;
+  width: 700px;
+  height: 700px;
   position: absolute;
   animation: outerAnimation 8s infinite;
   animation-timing-function: linear;
@@ -146,16 +204,14 @@
 
 
 @keyframes bkgrAnimation {
-  0%  {background: red;}
+  0%  {background: green;}
 
-  25% {background: green;}
+  25% {background: blue;}
 
-  50% {background: blue;}
+  50% {background: red;}
 
-  75% {background: green;}
+  75% {background: blue;}
 
-  100% {background: red;}
+  100% {background: green;}
 
 }
-
-
